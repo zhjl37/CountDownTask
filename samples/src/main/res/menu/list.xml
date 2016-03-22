@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:appCompat="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_list1"
+        android:title="list1"
+        appCompat:showAsAction="always|withText" />
+
+    <item
+        android:id="@+id/action_list2"
+        android:title="list2"
+        appCompat:showAsAction="always|withText" />
+</menu>

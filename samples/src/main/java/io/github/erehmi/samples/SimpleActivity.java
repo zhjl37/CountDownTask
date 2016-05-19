@@ -35,7 +35,7 @@ public class SimpleActivity extends AppCompatActivity implements OnCountDownList
 
     @Override
     public void onTick(View view, long millisUntilFinished) {
-        mCountDownTextView.setText(String.valueOf((millisUntilFinished + 999) / 1000));
+        mCountDownTextView.setText(String.valueOf(millisUntilFinished / 1000));
     }
 
     @Override

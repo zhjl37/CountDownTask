@@ -53,7 +53,13 @@ public class CountDownTimers {
 
     protected void until(View view, long millis, OnCountDownListener listener) {
         ViewAware viewAware = new ViewAware(view);
-        CountDownInfo countDownInfo = new CountDownInfo(viewAware, millis, listener);
+
+        // NOTICE THAT:
+        // Because of the mechanism of CountDownTimer and
+        // the time interval error of Handler#sendMessageDelayed(Message, long),
+        // the target millis must be adjusted.
+        long adjustMillis = adjustTargetMillis(millis);
+        CountDownInfo countDownInfo = new CountDownInfo(viewAware, adjustMillis, listener);
         ensureCountDownInfoSparseArray();
 
         long currentMillis = SystemClock.elapsedRealtime();
@@ -65,12 +71,11 @@ public class CountDownTimers {
 
         mCountDownInfoSparseArray.append(id, countDownInfo);
 
-        long millisInFuture = millis - currentMillis;
-        if ((millisInFuture > 0) && (millis > mMaxMillis)) {
-            millisInFuture = adjustMillisInFuture(millisInFuture);
+        long millisInFuture = adjustMillis - currentMillis;
+        if ((millisInFuture > 0) && (adjustMillis > mMaxMillis)) {
             LogUtils.d("create CountDownTimer: " + millisInFuture);
 
-            mMaxMillis = millis;
+            mMaxMillis = adjustMillis;
             cancelCountDownTimer();
 
             mCountDownTimer = new CountDownTimer(millisInFuture, mCountDownInterval) {
@@ -96,9 +101,8 @@ public class CountDownTimers {
     }
 
     // reduce error for the last one
-    private long adjustMillisInFuture(long millisInFuture) {
-        //millisInFuture = (millisInFuture + (mCountDownInterval - 1)) / mCountDownInterval * mCountDownInterval;
-        return millisInFuture + mCountDownInterval;
+    private long adjustTargetMillis(long millis) {
+        return millis + mCountDownInterval - 1;
     }
 
     private void doOnTick(long maxMillisUntilFinished) {
@@ -124,7 +128,9 @@ public class CountDownTimers {
     private boolean doOnTickOrFinish(CountDownInfo countDownInfo, long currentMillis) {
         LogUtils.d("doOnTickOrFinish() # id: " + countDownInfo.viewAware.getId());
 
-        if (countDownInfo.millis > currentMillis) {
+        long targetMillis = countDownInfo.millis;
+        long deltaMillis = targetMillis - currentMillis;
+        if (targetMillis > currentMillis && deltaMillis > mCountDownInterval) {
             doOnTick(countDownInfo, currentMillis);
             return false;
         } else {

@@ -69,7 +69,7 @@ public class CountDownAdapter extends ArrayAdapter<CountDownInfo> {
         textView1.setText(String.valueOf(position));
 
         TextView textView2 = (TextView) view.findViewById(android.R.id.text2);
-        textView2.setText(String.valueOf((millisUntilFinished + countDownInterval - 1) / countDownInterval));
+        textView2.setText(String.valueOf(millisUntilFinished / countDownInterval));
     }
 
     private void doOnFinish(int position, View view) {

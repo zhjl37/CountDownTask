@@ -4,12 +4,7 @@ CountDownTask
 CountDownTask is a countdown library. It can work with a single view or a
 adapter view, etc.
 
- 
-
-中文:
-[http://erehmi.github.io/android-case-abslistview-count-down](http://erehmi.github.io/android-case-abslistview-count-down)
-
- 
+中文: <http://erehmi.github.io/android-case-abslistview-count-down>
 
 Usage
 -----
@@ -55,8 +50,6 @@ or
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 countDownTask.cancel();
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
- 
 
 Example
 -------

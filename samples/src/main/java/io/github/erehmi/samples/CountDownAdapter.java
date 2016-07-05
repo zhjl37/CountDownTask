@@ -1,6 +1,7 @@
 package io.github.erehmi.samples;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,6 +18,7 @@ import io.github.erehmi.countdown.CountDownTimers.OnCountDownListener;
  */
 public class CountDownAdapter extends ArrayAdapter<CountDownInfo> {
     private static final String TAG = "CountDownAdapter";
+    private static final int[] COLORS = {Color.WHITE, Color.LTGRAY};
 
     private CountDownTask mCountDownTask;
 
@@ -44,6 +46,9 @@ public class CountDownAdapter extends ArrayAdapter<CountDownInfo> {
         } else {
             cancelCountDown(position, countDownInfo, convertView);
         }
+
+        int colorIndex = position % COLORS.length;
+        convertView.setBackgroundColor(COLORS[colorIndex]);
         return convertView;
     }
 

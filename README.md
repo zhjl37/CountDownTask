@@ -6,11 +6,7 @@ adapter view, etc.
 
 中文: <http://erehmi.github.io/android-case-abslistview-count-down>
 
-![](https://raw.githubusercontent.com/erehmi/CountDownTask/master/screen_record_1.gif)
-
-![](https://raw.githubusercontent.com/erehmi/CountDownTask/master/screen_record_2.gif)
-
-![](https://raw.githubusercontent.com/erehmi/CountDownTask/master/screen_record_3.gif)
+![](https://raw.githubusercontent.com/erehmi/CountDownTask/master/screen_record_1.gif) ![](https://raw.githubusercontent.com/erehmi/CountDownTask/master/screen_record_2.gif) ![](https://raw.githubusercontent.com/erehmi/CountDownTask/master/screen_record_3.gif)
 
 Usage
 -----

@@ -23,3 +23,30 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.2.1'
 }
+
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'CountDownTask'
+
+    publishedGroupId = 'io.github.erehmi'
+    libraryName = 'CountDownTask'
+    artifact = 'countdowntask'
+
+    libraryDescription = 'A countdown library for Android.'
+
+    siteUrl = 'https://github.com/erehmi/CountDownTask'
+    gitUrl = 'https://github.com/erehmi/CountDownTask.git'
+
+    libraryVersion = '1.0'
+
+    developerId = 'erehmi'
+    developerName = 'Cloud Chang'
+    developerEmail = 'erehmi@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
+apply from: '../android-maven.gradle'
+apply from: '../bintray.gradle'

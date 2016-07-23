@@ -12,7 +12,9 @@ Gradle
 ------
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-compile 'io.github.erehmi:countdowntask:1.0'
+dependencies {
+  compile 'io.github.erehmi:countdowntask:1.0'
+}
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Maven

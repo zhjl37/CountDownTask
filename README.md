@@ -8,15 +8,6 @@ adapter view, etc.
 
 ![](https://raw.githubusercontent.com/erehmi/CountDownTask/master/screen_record_1.gif) ![](https://raw.githubusercontent.com/erehmi/CountDownTask/master/screen_record_2.gif) ![](https://raw.githubusercontent.com/erehmi/CountDownTask/master/screen_record_3.gif)
 
-Gradle
-------
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-dependencies {
-  compile 'io.github.erehmi:countdowntask:1.0'
-}
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 Usage
 -----
 

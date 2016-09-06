@@ -2,13 +2,13 @@ apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 24
-    buildToolsVersion "24.0.0"
+    buildToolsVersion "24.0.2"
 
     defaultConfig {
         minSdkVersion 8
         targetSdkVersion 24
-        versionCode 2
-        versionName "1.1"
+        versionCode 1
+        versionName "1.0"
     }
     buildTypes {
         release {
@@ -20,14 +20,14 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:24.1.1'
+    compile 'com.android.support:appcompat-v7:24.2.0'
 }
 
 ext {
     bintrayRepo = 'maven'
-    bintrayName = 'io.github.erehmi:countdowntask'
+    bintrayName = 'com.github.erehmi:countdowntask'
 
-    publishedGroupId = 'io.github.erehmi'
+    publishedGroupId = 'com.github.erehmi'
     libraryName = 'CountDownTask'
     artifact = 'countdowntask'
 
@@ -36,7 +36,7 @@ ext {
     siteUrl = 'https://github.com/erehmi/CountDownTask'
     gitUrl = 'https://github.com/erehmi/CountDownTask.git'
 
-    libraryVersion = '1.1'
+    libraryVersion = '1.0'
 
     developerId = 'erehmi'
     developerName = 'Cloud Chang'

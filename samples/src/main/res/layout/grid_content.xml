@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<GridView android:id="@android:id/list"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<GridView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@android:id/list"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/darker_gray"
+    android:dividerHeight="0.5dp"
     android:numColumns="2"
+    android:horizontalSpacing="0.5dp"
+    android:verticalSpacing="0.5dp"
     android:orientation="vertical"
     android:stretchMode="columnWidth"
     tools:context=".GridActivity" />

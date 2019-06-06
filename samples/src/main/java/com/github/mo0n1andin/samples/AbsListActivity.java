@@ -1,4 +1,4 @@
-package io.github.erehmi.samples;
+package com.github.mo0n1andin.samples;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -9,7 +9,7 @@ import android.widget.AbsListView;
 import java.util.ArrayList;
 import java.util.List;
 
-import io.github.erehmi.countdown.CountDownTask;
+import com.github.mo0n1andin.countdown.CountDownTask;
 
 public abstract class AbsListActivity extends AppCompatActivity {
     private static final String TAG = AbsListActivity.class.getSimpleName();
@@ -42,7 +42,7 @@ public abstract class AbsListActivity extends AppCompatActivity {
         for (int i = 0; i < 50; i++) {
             CountDownInfo countDownInfo = new CountDownInfo();
             countDownInfo.countDownInterval = (i % 2 == 0) ? 500 : 1000;
-            countDownInfo.millis = (i < 5) ? 0 : (millis + 1000 * i);
+            countDownInfo.millis = (i < 2) ? 0 : (millis + 1000 * i);
             list.add(countDownInfo);
         }
         return list;

@@ -1,4 +1,4 @@
-package io.github.erehmi.samples;
+package com.github.mo0n1andin.samples;
 
 /**
  * @author WhatsAndroid

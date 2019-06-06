@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest
-    package="io.github.erehmi.samples"
+    package="com.github.mo0n1andin.samples"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application

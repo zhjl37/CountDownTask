@@ -1,4 +1,4 @@
-package io.github.erehmi.samples;
+package com.github.mo0n1andin.samples;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -10,15 +10,15 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import io.github.erehmi.countdown.CountDownTask;
-import io.github.erehmi.countdown.CountDownTimers.OnCountDownListener;
+import com.github.mo0n1andin.countdown.CountDownTask;
+import com.github.mo0n1andin.countdown.CountDownTimers.OnCountDownListener;
 
 /**
  * @author WhatsAndroid
  */
 public class CountDownAdapter extends ArrayAdapter<CountDownInfo> {
     private static final String TAG = "CountDownAdapter";
-    private static final int[] COLORS = {Color.WHITE, Color.LTGRAY};
+    private static final int[] COLORS = {Color.WHITE, Color.parseColor("#fff1f1f1")};
 
     private CountDownTask mCountDownTask;
 
@@ -47,12 +47,16 @@ public class CountDownAdapter extends ArrayAdapter<CountDownInfo> {
             cancelCountDown(position, countDownInfo, convertView);
         }
 
+        TextView textView2 = (TextView) convertView.findViewById(android.R.id.text2);
+        textView2.setText(countDownInfo.countDownInterval + "ms");
+
         int colorIndex = position % COLORS.length;
-        convertView.setBackgroundColor(COLORS[colorIndex]);
+        //convertView.setBackgroundColor(COLORS[colorIndex]);
         return convertView;
     }
 
-    private void startCountDown(final int position, final CountDownInfo countDownInfo, View convertView) {
+    private void startCountDown(final int position, final CountDownInfo countDownInfo,
+            View convertView) {
         if (mCountDownTask != null) {
             mCountDownTask.until(convertView, countDownInfo.millis,
                     countDownInfo.countDownInterval, new OnCountDownListener() {
@@ -69,20 +73,15 @@ public class CountDownAdapter extends ArrayAdapter<CountDownInfo> {
         }
     }
 
-    private void doOnTick(int position, View view, long millisUntilFinished, long countDownInterval) {
+    private void doOnTick(int position, View view, long millisUntilFinished,
+            long countDownInterval) {
         TextView textView1 = (TextView) view.findViewById(android.R.id.text1);
-        textView1.setText(String.valueOf(position));
-
-        TextView textView2 = (TextView) view.findViewById(android.R.id.text2);
-        textView2.setText(String.valueOf(millisUntilFinished / countDownInterval));
+        textView1.setText(String.valueOf(millisUntilFinished / countDownInterval));
     }
 
     private void doOnFinish(int position, View view) {
         TextView textView1 = (TextView) view.findViewById(android.R.id.text1);
-        textView1.setText(String.valueOf(position));
-
-        TextView textView2 = (TextView) view.findViewById(android.R.id.text2);
-        textView2.setText("DONE.");
+        textView1.setText("DONE.");
     }
 
     private void cancelCountDown(int position, CountDownInfo countDownInfo, View view) {
@@ -91,9 +90,6 @@ public class CountDownAdapter extends ArrayAdapter<CountDownInfo> {
         }
 
         TextView textView1 = (TextView) view.findViewById(android.R.id.text1);
-        textView1.setText(String.valueOf(position));
-
-        TextView textView2 = (TextView) view.findViewById(android.R.id.text2);
-        textView2.setText(null);
+        textView1.setText(null);
     }
 }

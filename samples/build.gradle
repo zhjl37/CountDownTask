@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 24
-    buildToolsVersion "24.0.2"
+    compileSdkVersion 28
+//    buildToolsVersion "26.0.3"
 
     defaultConfig {
-        applicationId "io.github.erehmi.countdowntimer"
-        minSdkVersion 11
-        targetSdkVersion 24
+        applicationId "com.github.mo0n1andin.countdowntimer"
+        minSdkVersion 14
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
     }
@@ -22,8 +22,8 @@ android {
 // NOTICE THAT:
 // com.android.support:appcompat-v7:24.2.0 requires minSdkVersion-9
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:24.2.0'
-    //compile project(':countdowntask')
-    compile 'com.github.erehmi:countdowntask:1.0.1'
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation project(':countdowntask')
+//    compile 'com.github.mo0n1andin:countdowntask:1.2.0'
 }

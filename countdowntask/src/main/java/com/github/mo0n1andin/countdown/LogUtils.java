@@ -1,4 +1,4 @@
-package io.github.erehmi.countdown;
+package com.github.mo0n1andin.countdown;
 
 import android.util.Log;
 

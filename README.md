@@ -6,7 +6,7 @@ adapter view, etc.
 
 中文: <http://mo0n1andin.github.io/android-case-abslistview-count-down>
 
-![](https://github.com/mo0n1andin/RemoteControl/raw/master/screenshot.jpg)
+![](https://raw.githubusercontent.com/erehmi/CountDownTask/master/screen_record_1.gif) ![](https://raw.githubusercontent.com/erehmi/CountDownTask/master/screen_record_2.gif) ![](https://raw.githubusercontent.com/erehmi/CountDownTask/master/screen_record_3.gif)
 
 Gradle
 ------

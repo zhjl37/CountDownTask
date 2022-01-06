@@ -4,8 +4,6 @@ CountDownTask
 CountDownTask is a countdown library. It can work with a single view or a
 adapter view, etc.
 
-中文: <http://mo0n1andin.github.io/android-case-abslistview-count-down>
-
 ![](https://raw.githubusercontent.com/mo0n1andin/CountDownTask/master/screen_record_1.gif) ![](https://raw.githubusercontent.com/mo0n1andin/CountDownTask/master/screen_record_2.gif) ![](https://raw.githubusercontent.com/mo0n1andin/CountDownTask/master/screen_record_3.gif)
 
 Gradle

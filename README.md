@@ -58,12 +58,3 @@ or
 countDownTask.cancel();
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Example
--------
-
--   [SimpleActivity](https://github.com/mo0n1andin/CountDownTask/blob/master/samples/src/main/java/io/github/mo0n1andin/samples/SimpleActivity.java)
-
--   [ListActivity](https://github.com/mo0n1andin/CountDownTask/blob/master/samples/src/main/java/io/github/mo0n1andin/samples/ListActivity.java)
-
--   [GridActivity](https://github.com/mo0n1andin/CountDownTask/blob/master/samples/src/main/java/io/github/mo0n1andin/samples/GridActivity.java)
-

@@ -10,7 +10,7 @@ Gradle
 ------
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-compile 'com.github.erehmi:countdowntask:1.0.1'
+implementation 'com.zhjl37.countdowntask:countdowntask:1.0.0'
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Usage

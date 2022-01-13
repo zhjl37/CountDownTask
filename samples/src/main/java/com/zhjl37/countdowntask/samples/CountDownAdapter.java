@@ -1,4 +1,4 @@
-package com.github.mo0n1andin.samples;
+package com.zhjl37.countdowntask.samples;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -10,8 +10,8 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import com.github.mo0n1andin.countdown.CountDownTask;
-import com.github.mo0n1andin.countdown.CountDownTimers.OnCountDownListener;
+import com.zhjl37.countdowntask.CountDownTask;
+import com.zhjl37.countdowntask.CountDownTimers.OnCountDownListener;
 
 /**
  * @author WhatsAndroid

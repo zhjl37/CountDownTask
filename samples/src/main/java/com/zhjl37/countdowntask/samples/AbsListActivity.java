@@ -1,7 +1,7 @@
-package com.github.mo0n1andin.samples;
+package com.zhjl37.countdowntask.samples;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.AbsListView;
@@ -9,7 +9,7 @@ import android.widget.AbsListView;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.github.mo0n1andin.countdown.CountDownTask;
+import com.zhjl37.countdowntask.CountDownTask;
 
 public abstract class AbsListActivity extends AppCompatActivity {
     private static final String TAG = AbsListActivity.class.getSimpleName();

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest
-    package="com.github.mo0n1andin.samples"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zhjl37.countdowntask.samples">
 
     <application
         android:allowBackup="true"
@@ -10,7 +9,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".LauncherActivity">
+        <activity
+            android:name=".LauncherActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -19,6 +20,7 @@
 
         <activity
             android:name=".SimpleActivity"
+            android:exported="true"
             android:label="SimpleActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,6 +30,7 @@
 
         <activity
             android:name=".ListActivity"
+            android:exported="true"
             android:label="ListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -37,6 +40,7 @@
 
         <activity
             android:name=".GridActivity"
+            android:exported="true"
             android:label="GridActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

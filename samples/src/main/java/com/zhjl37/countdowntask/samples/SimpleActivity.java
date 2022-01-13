@@ -1,12 +1,12 @@
-package com.github.mo0n1andin.samples;
+package com.zhjl37.countdowntask.samples;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
-import com.github.mo0n1andin.countdown.CountDownTask;
-import com.github.mo0n1andin.countdown.CountDownTimers.OnCountDownListener;
+import com.zhjl37.countdowntask.CountDownTask;
+import com.zhjl37.countdowntask.CountDownTimers.OnCountDownListener;
 
 public class SimpleActivity extends AppCompatActivity implements OnCountDownListener {
     private static final String TAG = SimpleActivity.class.getSimpleName();

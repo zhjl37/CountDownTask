@@ -1,4 +1,4 @@
-package com.github.mo0n1andin.countdown;
+package com.zhjl37.countdowntask;
 
 import android.os.CountDownTimer;
 import android.os.SystemClock;
@@ -8,11 +8,7 @@ import android.view.View;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * @author WhatsAndroid
- */
 public class CountDownTimers {
-    private static final String TAG = "CountDownTimers";
 
     private final long mCountDownInterval;
     private long mMaxMillis;

@@ -1,12 +1,1 @@
-<manifest package="com.github.mo0n1andin.countdown"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-
-<!--
-    <application
-        android:label="@string/app_name"
-        android:supportsRtl="true">
-
-    </application>
--->
-
-</manifest>
+<manifest package="com.zhjl37.countdowntask"/>

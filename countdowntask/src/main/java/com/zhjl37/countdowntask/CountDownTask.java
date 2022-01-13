@@ -1,8 +1,10 @@
-package com.github.mo0n1andin.countdown;
+package com.zhjl37.countdowntask;
 
 import android.os.SystemClock;
 import android.util.SparseArray;
 import android.view.View;
+
+import com.zhjl37.countdowntask.CountDownTimers.OnCountDownListener;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -10,13 +12,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.github.mo0n1andin.countdown.CountDownTimers.OnCountDownListener;
-
-/**
- * @author WhatsAndroid
- */
 public class CountDownTask {
-    private static final String TAG = "CountDownTask";
 
     public static CountDownTask create() {
         return new CountDownTask();
@@ -37,7 +33,7 @@ public class CountDownTask {
         if (mMap == null) {
             synchronized (this) {
                 if (mMap == null) {
-                    mMap = Collections.synchronizedMap(new LinkedHashMap<Long, CountDownTimers>());
+                    mMap = Collections.synchronizedMap(new LinkedHashMap<>());
                 }
             }
         }
@@ -67,7 +63,8 @@ public class CountDownTask {
         return list;
     }
 
-    public CountDownTask until(View view, long millis, long countDownInterval, OnCountDownListener listener) {
+    public CountDownTask until(View view, long millis, long countDownInterval,
+            OnCountDownListener listener) {
         CountDownTimers timers = get(countDownInterval, true);
         addViewIds(view, timers);
         timers.until(view, millis, listener);

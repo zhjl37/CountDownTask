@@ -1,16 +1,18 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 28
-//    buildToolsVersion "26.0.3"
+    compileSdkVersion 31
 
     defaultConfig {
-        applicationId "com.github.mo0n1andin.countdowntimer"
-        minSdkVersion 14
-        targetSdkVersion 28
+        applicationId "com.zhjl37.countdowntask.samples"
+
+        minSdkVersion 16
+        targetSdkVersion 31
+
         versionCode 1
         versionName "1.0"
     }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -23,7 +25,8 @@ android {
 // com.android.support:appcompat-v7:24.2.0 requires minSdkVersion-9
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'androidx.appcompat:appcompat:1.4.0'
+
     implementation project(':countdowntask')
-//    compile 'com.github.mo0n1andin:countdowntask:1.2.0'
+//    implementation 'com.zhjl37.countdowntask:countdowntask:1.0.0'
 }

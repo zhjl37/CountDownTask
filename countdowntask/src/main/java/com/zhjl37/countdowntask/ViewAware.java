@@ -1,13 +1,10 @@
-package com.github.mo0n1andin.countdown;
+package com.zhjl37.countdowntask;
 
 import android.view.View;
 
 import java.lang.ref.Reference;
 import java.lang.ref.WeakReference;
 
-/**
- * @author WhatsAndroid
- */
 class ViewAware {
     private static final String TAG = "ViewAware";
 
@@ -15,7 +12,7 @@ class ViewAware {
 
     public ViewAware(View view) {
         if (view == null) throw new IllegalArgumentException("view must not be null");
-        mViewRef = new WeakReference<View>(view);
+        mViewRef = new WeakReference<>(view);
     }
 
     public View getWrappedView() {
@@ -30,5 +27,4 @@ class ViewAware {
         View view = mViewRef.get();
         return view == null ? super.hashCode() : view.hashCode();
     }
-
 }

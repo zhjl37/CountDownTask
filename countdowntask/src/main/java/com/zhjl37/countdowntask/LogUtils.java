@@ -1,10 +1,7 @@
-package com.github.mo0n1andin.countdown;
+package com.zhjl37.countdowntask;
 
 import android.util.Log;
 
-/**
- * @author WhatsAndroid
- */
 class LogUtils {
     private static final String TAG = "CountDown";
     private static final boolean DEBUG = false;

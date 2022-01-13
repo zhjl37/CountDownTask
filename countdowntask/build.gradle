@@ -1,21 +1,12 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.novoda.bintray-release'
+apply plugin: "com.vanniktech.maven.publish"
 
 android {
-    compileSdkVersion 28
-//    buildToolsVersion "26.0.3"
+    compileSdkVersion 31
 
     defaultConfig {
-        minSdkVersion 8
-        targetSdkVersion 28
-        versionCode 3
-        versionName "1.1.0"
-    }
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
+        minSdkVersion 16
+        targetSdkVersion 31
     }
 }
 
@@ -23,13 +14,17 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 }
 
-publish {
-    userOrg = 'mo0n1andin'
-    groupId = 'com.github.mo0n1andin'
-    artifactId = 'countdowntask'
-    publishVersion = '1.1.0'
-    desc = 'A countdown library for Android.'
-    website = 'https://github.com/mo0n1andin/CountDownTask'
+tasks.withType(Javadoc) {
+    failOnError false
+    options.addStringOption('Xdoclint:none', '-quiet')
+    options.addStringOption('encoding', 'UTF-8')
+    options.addStringOption('charSet', 'UTF-8')
 }
 
-//$ ./gradlew clean build bintrayUpload -PbintrayUser=BINTRAY_USERNAME -PbintrayKey=BINTRAY_KEY -PdryRun=false
+allprojects {
+    plugins.withId("com.vanniktech.maven.publish") {
+        mavenPublish {
+            sonatypeHost = "S01"
+        }
+    }
+}

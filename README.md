@@ -4,13 +4,15 @@ CountDownTask
 CountDownTask is a countdown library. It can work with a single view or a
 adapter view, etc.
 
+中文: <http://mo0n1andin.github.io/android-case-abslistview-count-down>
+
 ![](https://raw.githubusercontent.com/mo0n1andin/CountDownTask/master/screen_record_1.gif) ![](https://raw.githubusercontent.com/mo0n1andin/CountDownTask/master/screen_record_2.gif) ![](https://raw.githubusercontent.com/mo0n1andin/CountDownTask/master/screen_record_3.gif)
 
 Gradle
 ------
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-implementation 'com.zhjl37.countdowntask:countdowntask:1.0.0'
+compile 'com.github.erehmi:countdowntask:1.0.1'
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Usage
@@ -58,3 +60,30 @@ or
 countDownTask.cancel();
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Example
+-------
+
+-   [SimpleActivity](https://github.com/mo0n1andin/CountDownTask/blob/master/samples/src/main/java/io/github/mo0n1andin/samples/SimpleActivity.java)
+
+-   [ListActivity](https://github.com/mo0n1andin/CountDownTask/blob/master/samples/src/main/java/io/github/mo0n1andin/samples/ListActivity.java)
+
+-   [GridActivity](https://github.com/mo0n1andin/CountDownTask/blob/master/samples/src/main/java/io/github/mo0n1andin/samples/GridActivity.java)
+
+License
+-------
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Copyright 2016, mo0n1andin
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
